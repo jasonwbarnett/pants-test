@@ -1,0 +1,19 @@
+[GLOBAL]
+pants_version = "2.19.0"
+backend_packages = [
+  "pants.backend.python",
+]
+
+[source]
+root_patterns = [
+  "utility/one",
+  "utility/some/long/subdir/two",
+]
+
+[python]
+interpreter_constraints = ['>=3.9,<3.11']
+resolves_generate_lockfiles = false
+run_against_entire_lockfile = true
+
+[python.resolves]
+python-default = "python-default.lock"
